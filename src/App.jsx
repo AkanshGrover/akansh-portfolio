@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion';
 import Navbar from './components/Navbar'
 import ThemeToggle from './components/ThemeToggle'
 import Home from './pages/Home';
@@ -20,6 +21,10 @@ function App() {
     document.body.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
   }, [theme])
+
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: "auto"});
+  }, [active]);
 
   const [projects, setProjects] = useState([]);
 
@@ -48,7 +53,7 @@ function App() {
     <div className="app">
       <Navbar active={active} setActive={setActive}/>
       <ThemeToggle theme={theme} toggletheme={toggletheme}/>
-      <div className="pageContainer">{renderPage()}</div>
+      <motion.div className="pageContainer" initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.45}} key={active}>{renderPage()}</motion.div>
     </div>
   )
 }
