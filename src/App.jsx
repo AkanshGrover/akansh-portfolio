@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 import ThemeToggle from './components/ThemeToggle'
 import Home from './pages/Home';
 import Projects from './pages/Projects';
-import getProjects from './data/projects'
+import getProjectsInfo from './data/projects'
 import Experience from './pages/Experience';
 
 function App() {
@@ -26,14 +26,14 @@ function App() {
     window.scrollTo({top: 0, behavior: "auto"});
   }, [active]);
 
-  const [projects, setProjects] = useState([]);
+  const [projectsInfo, setProjectsInfo] = useState({});
 
   useEffect(() => {
-    async function loadProjects(){
-      const data = await getProjects();
-      setProjects(data);
+    async function loadProjectsInfo(){
+      const data = await getProjectsInfo();
+      setProjectsInfo(data);
     }
-    loadProjects();
+    loadProjectsInfo();
   }, [])
 
   const renderPage = () => {
@@ -42,7 +42,7 @@ function App() {
         return <Home/>
 
       case 1:
-        return <Projects projects={projects}/>
+        return <Projects projectsInfo={projectsInfo}/>
 
       case 2:
         return <Experience/>

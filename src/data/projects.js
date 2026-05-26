@@ -1,25 +1,31 @@
-async function getProjects(){
+import pBackup from "./projectsBackup.json"
+
+async function getProjectsInfo(){
     try{
         const response = await fetch("https://api.github.com/users/AkanshGrover/repos");
+        if (!response.ok) {
+            throw new Error("Failed to fetch from github api");
+        }
+
         const data = await response.json();
 
-        const fdata = [];
+        const pdata = [];
 
-        for (const key in data){
-            const cur = data[key];
-            const temp = {name: cur["name"].replace(/[_-]/g, " "), gitl: cur["html_url"], desc: cur["description"], tech:cur["topics"], pushed_at: cur["pushed_at"]};
-            if (temp["desc"] != null & temp["name"] != "AkanshGrover"){
-                fdata.push(temp)
+        for (const repo of data){
+            const temp = {name: repo.name.replace(/[_-]/g, " "), gitl: repo.html_url, desc: repo.description, tech: repo.topics, pushed_at: repo.pushed_at};
+            if (temp.desc != null && temp.name != "AkanshGrover"){
+                pdata.push(temp);
             }
         }
         
-        fdata.sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at));
+        pdata.sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at));
 
-        return fdata;
+        return {lastUpdated: new Date().toLocaleString("en-IN", {dateStyle: "medium", timeStyle: "short", timeZone: "Asia/Kolkata"}), pdata};
     }
     catch (error){
-        return []
+        console.log("github fetch failed, trying backup json")
+        return pBackup;
     }
 }
 
-export default getProjects
+export default getProjectsInfo

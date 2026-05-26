@@ -1,6 +1,8 @@
 import PCard from "../components/PCard"
 
-function Projects( {projects} ){
+function Projects( {projectsInfo} ){
+    const projects = projectsInfo.pdata;
+    const lastUptd = projectsInfo.lastUpdated;
     return (
         <div className="projectsPage">
             <div className="pheader">
@@ -12,6 +14,7 @@ function Projects( {projects} ){
                     <PCard key={i} project={project}/>
                 ))}
             </div>
+            <div className="lupdated">Last updated: {lastUptd} (IST)</div>
         </div>
     )
 }

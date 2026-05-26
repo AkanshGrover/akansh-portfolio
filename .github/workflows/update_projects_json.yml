@@ -1,0 +1,105 @@
+name: Update Projects Backup
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-projects:
+    runs-on: ubuntu-latest
+
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+
+      - name: Generate projectsBackup.json
+        run: |
+          node <<'EOF'
+          const fs = require('fs');
+
+          async function main() {
+
+            const response = await fetch("https://api.github.com/users/AkanshGrover/repos");
+
+            if (!response.ok) {
+              throw new Error("Failed to fetch from github api");
+            }
+
+            const data = await response.json();
+
+            const pdata = [];
+
+            for (const repo of data){
+              const temp = {name: repo.name.replace(/[_-]/g, " "), gitl: repo.html_url, desc: repo.description, tech: repo.topics, pushed_at: repo.pushed_at};
+              if (temp.desc != null && temp.name != "AkanshGrover"){
+                pdata.push(temp);
+              }
+            }
+
+            pdata.sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at));
+
+            const filePath = './src/data/projectsBackup.json';
+
+            let oldData = {pdata: []};
+
+            if (fs.existsSync(filePath)) {
+              oldData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+            }
+
+            const oldProjects = JSON.stringify(oldData.pdata || []);
+
+            const newProjects = JSON.stringify(pdata);
+
+            if (oldProjects === newProjects) {
+              console.log(
+                'No project changes detected'
+              );
+
+              process.exit(0);
+            }
+
+            // Create updated backup
+            const output = {
+              lastUpdated: new Date().toLocaleString("en-IN", {dateStyle: "medium", timeStyle: "short", timeZone: "Asia/Kolkata"})
+              , pdata
+            };
+
+            fs.writeFileSync(
+              filePath,
+              JSON.stringify(output, null, 2)
+            );
+
+            console.log(
+              'projectsBackup.json updated'
+            );
+          }
+
+          main();
+          EOF
+
+      - name: Commit changes if needed
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add src/data/projectsBackup.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update projects backup"
+            git push
+          fi

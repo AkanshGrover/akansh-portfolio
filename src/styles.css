@@ -385,8 +385,7 @@ body{
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   
   gap: 26px;
-  /* padding: 8px 24px; */
-  padding: 8px 24px 40px 24px;
+  padding: 8px 24px 20px 24px;
 }
 
 .PCard{
@@ -456,6 +455,19 @@ body{
   color: var(--blue);
 
   font-size: 0.85rem;
+}
+
+.lupdated{
+  width: 100%;
+
+  color: var(--text-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-bottom: 20px;
+
+  font-size: 1rem;
 }
 
 .experiencePage{
@@ -590,7 +602,7 @@ body{
   }
 
   .projectSection{
-    padding: 8px 12px 40px 12px;
+    padding: 8px 12px 20px 12px;
   }
   
   .experienceSection{
