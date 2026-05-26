@@ -1,1 +1,204 @@
-{}
+{
+  "lastUpdated": "26 May 2026, 6:36 pm",
+  "pdata": [
+    {
+      "name": "akansh portfolio",
+      "gitl": "https://github.com/AkanshGrover/akansh-portfolio",
+      "desc": "A responsive portfolio website designed so the core code rarely needs changes. Projects are automatically fetched from GitHub, keeping the portfolio always up to date. Personal information is stored in a separate editable file, making updates easy without touching the structure and reducing maintenance effort and errors.",
+      "tech": [
+        "github-pages",
+        "html-css-javascript",
+        "nodejs",
+        "reactjs"
+      ],
+      "pushed_at": "2026-05-26T09:34:33Z"
+    },
+    {
+      "name": "Network Traffic Anomaly Detection",
+      "gitl": "https://github.com/AkanshGrover/Network-Traffic-Anomaly-Detection",
+      "desc": "A machine learning based anomaly detection framework for network traffic analysis, evaluating multiple models including XGBoost, LSTM and Transformer architectures, to detect and classify anomalous patterns in cybersecurity data.",
+      "tech": [
+        "deep-learning",
+        "lstm",
+        "machine-learning",
+        "neural-network",
+        "python",
+        "transformers",
+        "xgboost"
+      ],
+      "pushed_at": "2026-05-16T10:29:41Z"
+    },
+    {
+      "name": "Multi Agent Research System",
+      "gitl": "https://github.com/AkanshGrover/Multi-Agent-Research-System",
+      "desc": "An AI multi-agent framework that automates research and report generation using specialized agents to break down topics, gather and synthesize information, generate structured content and iteratively refine outputs. It uses LLMs and modular orchestration to produce efficient reports with reduced manual effort and improved consistency.",
+      "tech": [
+        "agentic-ai",
+        "agentic-workflow",
+        "python",
+        "python-requests",
+        "scraping"
+      ],
+      "pushed_at": "2026-05-09T00:30:18Z"
+    },
+    {
+      "name": "ADB File Manager",
+      "gitl": "https://github.com/AkanshGrover/ADB-File-Manager",
+      "desc": "Ever felt that copying files via MTP on Android was slow or caused issues? Introducing ADB File Manager! Copy, move and delete folders or files between your Android device and computer using ADB protocols. ",
+      "tech": [
+        "adb",
+        "pyqt",
+        "pyside6",
+        "python",
+        "qt",
+        "shell"
+      ],
+      "pushed_at": "2025-12-02T00:06:50Z"
+    },
+    {
+      "name": "Drug Target Binding Affinity Prediction",
+      "gitl": "https://github.com/AkanshGrover/Drug-Target-Binding-Affinity-Prediction",
+      "desc": "A deep learning-based framework for drug target binding affinity prediction",
+      "tech": [
+        "deep-learning",
+        "drug-protein-interactions",
+        "python",
+        "tensorflow"
+      ],
+      "pushed_at": "2025-11-05T19:40:56Z"
+    },
+    {
+      "name": "CROPCURE",
+      "gitl": "https://github.com/AkanshGrover/CROPCURE",
+      "desc": "An image-based crop disease detection system using deep learning that helps identify plant diseases early and accurately from leaf images",
+      "tech": [
+        "cnn",
+        "deep-learning",
+        "flask",
+        "python",
+        "tesnorflow"
+      ],
+      "pushed_at": "2025-06-27T22:52:47Z"
+    },
+    {
+      "name": "SmartSurface",
+      "gitl": "https://github.com/AkanshGrover/SmartSurface",
+      "desc": "[WIP] A modular system that transforms any flat surface into an interactive input device using webcam-tracked finger gestures.",
+      "tech": [
+        "machine-learning",
+        "opencv",
+        "python"
+      ],
+      "pushed_at": "2025-06-15T22:41:13Z"
+    },
+    {
+      "name": "Gutenberg Scraper",
+      "gitl": "https://github.com/AkanshGrover/Gutenberg-Scraper",
+      "desc": "Command-line tool for downloading books from Project Gutenberg by author ID or subject/genre in multiple formats.",
+      "tech": [
+        "beautifulsoup4",
+        "python",
+        "python-requests"
+      ],
+      "pushed_at": "2025-02-26T21:43:41Z"
+    },
+    {
+      "name": "UniGuide",
+      "gitl": "https://github.com/AkanshGrover/UniGuide",
+      "desc": "UniGuide is a simple application designed to help new students, visitors and staff easily navigate the complex layout of a university campus.",
+      "tech": [
+        "css",
+        "html",
+        "java",
+        "javascript",
+        "spring-boot"
+      ],
+      "pushed_at": "2024-12-18T09:46:16Z"
+    },
+    {
+      "name": "Movie Genre Classifier",
+      "gitl": "https://github.com/AkanshGrover/Movie-Genre-Classifier",
+      "desc": "This project predicts movie genres from plot summaries using Word2Vec embeddings and a Decision Tree Classifier, with a user-friendly PySide6 GUI.",
+      "tech": [
+        "machine-learning",
+        "machine-learning-algorithms",
+        "numpy",
+        "pandas",
+        "pyside6",
+        "python",
+        "qt",
+        "sckit-learn"
+      ],
+      "pushed_at": "2024-07-05T21:21:52Z"
+    },
+    {
+      "name": "Customer Churn Prediction",
+      "gitl": "https://github.com/AkanshGrover/Customer-Churn-Prediction",
+      "desc": "This project predicts whether a customer will churn from a subscription-based service or business using TF-IDF vectorization and a Random Forest Classifier, with a user-friendly PySide6 GUI.",
+      "tech": [
+        "machine-learning",
+        "machine-learning-algorithms",
+        "numpy",
+        "pandas",
+        "pyside6",
+        "python",
+        "qt",
+        "sckit-learn"
+      ],
+      "pushed_at": "2024-07-05T15:01:10Z"
+    },
+    {
+      "name": "Spam SMS Detection",
+      "gitl": "https://github.com/AkanshGrover/Spam-SMS-Detection",
+      "desc": "This project predicts whether an SMS is spam or legitimate using Word2Vec embeddings and SVM classification, with a user-friendly PySide6 GUI.",
+      "tech": [
+        "machine-learning",
+        "machine-learning-algorithms",
+        "numpy",
+        "pandas",
+        "pyside6",
+        "python",
+        "qt",
+        "sckit-learn"
+      ],
+      "pushed_at": "2024-07-04T20:54:47Z"
+    },
+    {
+      "name": "DNS Editor",
+      "gitl": "https://github.com/AkanshGrover/DNS-Editor",
+      "desc": "This simple Linux app is written in python which helps the user change DNS without ever opening a terminal or digging down into settings. It provides a simple and quick UI.",
+      "tech": [
+        "dns",
+        "gtk",
+        "linux",
+        "pygtk",
+        "python"
+      ],
+      "pushed_at": "2024-05-30T22:29:57Z"
+    },
+    {
+      "name": "Web App Manager",
+      "gitl": "https://github.com/AkanshGrover/Web-App-Manager",
+      "desc": "A lightweight tool for creating shortcuts to websites and launching them in app mode. Create convenient shortcuts for your favorite websites to improve your browsing experience!",
+      "tech": [
+        "pyqt",
+        "pyside6",
+        "python"
+      ],
+      "pushed_at": "2024-04-04T20:46:03Z"
+    },
+    {
+      "name": "SpeakToMe",
+      "gitl": "https://github.com/AkanshGrover/SpeakToMe",
+      "desc": "An app designed to make writing and learning easier through dictation and repeated listening, helping users write more naturally and absorb information faster.",
+      "tech": [
+        "pyqt",
+        "pyside6",
+        "python",
+        "pyttsx3",
+        "text-to-speech"
+      ],
+      "pushed_at": "2024-03-28T07:50:53Z"
+    }
+  ]
+}
