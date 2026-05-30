@@ -389,6 +389,9 @@ body{
 }
 
 .PCard{
+  display: flex;
+  flex-direction: column;
+
   padding: 28px;
   background: var(--glass);
   backdrop-filter: blur(30px) saturate(180%);
@@ -416,6 +419,7 @@ body{
   justify-content: space-between;
 
   color: var(--text);
+  text-transform: capitalize;
 
   margin-bottom: 18px;
   gap: 13px;
@@ -434,6 +438,7 @@ body{
   color: var(--text);
 
   line-height: 1.8;
+  flex-grow: 1;
 
   margin-bottom: 24px;
 }
@@ -536,7 +541,7 @@ body{
 .ecardDesc{
   color: var(--text);
   line-height: 1.8;
-  white-space: pre-line;
+  padding-left: 1.2rem;
 }
 
 ::-webkit-scrollbar{

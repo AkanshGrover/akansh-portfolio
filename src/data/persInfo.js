@@ -1,5 +1,5 @@
 const persInfo = {
-    about: "I'm an AI/ML enthusiast and software developer passionate about building intelligent systems using Machine Learning, Large Language Models (LLMs), Computer Vision and Full-Stack technologies.",
+    about: "I like turning ideas into practical software, from AI-powered systems and automation tools to desktop applications and modern web experiences that solve real world problems.",
     skills: ["Java", "Python", "JavaScript", "TensorFlow",  "NumPy", "OpenCV", "Spring Boot", "Flask", "React", "PySide6", "MySQL"],
     exps: [
         {

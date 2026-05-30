@@ -12,7 +12,7 @@ function Home(){
             <div className="heroLeft">
                 <p className="smallHeading">I'm</p>
                 <h1 className="myName">Akansh Grover</h1>
-                <h2>Computer Science Engineer</h2>
+                <h2>AI/ML Engineer & Software Developer</h2>
                 <p className="heroDesc">{desc}</p>
                 <div className="skills">
                     {skills.map((skill, i) => (
