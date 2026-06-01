@@ -1,27 +1,25 @@
 {
-  "lastUpdated": "26 May 2026, 6:36 pm",
+  "lastUpdated": "1 Jun 2026, 10:16 am",
   "pdata": [
     {
       "name": "akansh portfolio",
       "gitl": "https://github.com/AkanshGrover/akansh-portfolio",
-      "desc": "A responsive portfolio website designed so the core code rarely needs changes. Projects are automatically fetched from GitHub, keeping the portfolio always up to date. Personal information is stored in a separate editable file, making updates easy without touching the structure and reducing maintenance effort and errors.",
+      "desc": "Self-maintaining portfolio that automatically syncs GitHub projects and separates content from code for easy updates.",
       "tech": [
         "github-pages",
         "html-css-javascript",
         "nodejs",
         "reactjs"
       ],
-      "pushed_at": "2026-05-26T09:34:33Z"
+      "pushed_at": "2026-05-30T14:15:16Z"
     },
     {
       "name": "Network Traffic Anomaly Detection",
       "gitl": "https://github.com/AkanshGrover/Network-Traffic-Anomaly-Detection",
-      "desc": "A machine learning based anomaly detection framework for network traffic analysis, evaluating multiple models including XGBoost, LSTM and Transformer architectures, to detect and classify anomalous patterns in cybersecurity data.",
+      "desc": "ML framework for detecting anomalous network traffic using XGBoost, LSTM and Transformer models.",
       "tech": [
         "deep-learning",
         "lstm",
-        "machine-learning",
-        "neural-network",
         "python",
         "transformers",
         "xgboost"
@@ -31,12 +29,12 @@
     {
       "name": "Multi Agent Research System",
       "gitl": "https://github.com/AkanshGrover/Multi-Agent-Research-System",
-      "desc": "An AI multi-agent framework that automates research and report generation using specialized agents to break down topics, gather and synthesize information, generate structured content and iteratively refine outputs. It uses LLMs and modular orchestration to produce efficient reports with reduced manual effort and improved consistency.",
+      "desc": "AI agent framework that automates research, content generation and report refinement using LLM-powered workflows.",
       "tech": [
         "agentic-ai",
         "agentic-workflow",
+        "llm",
         "python",
-        "python-requests",
         "scraping"
       ],
       "pushed_at": "2026-05-09T00:30:18Z"
@@ -81,17 +79,6 @@
       "pushed_at": "2025-06-27T22:52:47Z"
     },
     {
-      "name": "SmartSurface",
-      "gitl": "https://github.com/AkanshGrover/SmartSurface",
-      "desc": "[WIP] A modular system that transforms any flat surface into an interactive input device using webcam-tracked finger gestures.",
-      "tech": [
-        "machine-learning",
-        "opencv",
-        "python"
-      ],
-      "pushed_at": "2025-06-15T22:41:13Z"
-    },
-    {
       "name": "Gutenberg Scraper",
       "gitl": "https://github.com/AkanshGrover/Gutenberg-Scraper",
       "desc": "Command-line tool for downloading books from Project Gutenberg by author ID or subject/genre in multiple formats.",
@@ -121,7 +108,6 @@
       "desc": "This project predicts movie genres from plot summaries using Word2Vec embeddings and a Decision Tree Classifier, with a user-friendly PySide6 GUI.",
       "tech": [
         "machine-learning",
-        "machine-learning-algorithms",
         "numpy",
         "pandas",
         "pyside6",
@@ -137,7 +123,6 @@
       "desc": "This project predicts whether a customer will churn from a subscription-based service or business using TF-IDF vectorization and a Random Forest Classifier, with a user-friendly PySide6 GUI.",
       "tech": [
         "machine-learning",
-        "machine-learning-algorithms",
         "numpy",
         "pandas",
         "pyside6",
@@ -153,7 +138,6 @@
       "desc": "This project predicts whether an SMS is spam or legitimate using Word2Vec embeddings and SVM classification, with a user-friendly PySide6 GUI.",
       "tech": [
         "machine-learning",
-        "machine-learning-algorithms",
         "numpy",
         "pandas",
         "pyside6",
